@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -70,4 +70,63 @@ export default defineConfig([
     },
   },
 ])
-```
+``` -->
+# AI-Ecommerce Website Project
+
+## Project Overview
+AI-Ecommerce Website is a web application designed to simulate a modern online shopping platform with AI-based concepts. The system focuses on providing a clean user interface, efficient product interaction, and scalable architecture using modern web technologies.
+
+This project demonstrates practical implementation of frontend frameworks, API communication, database integration, and containerized deployment.
+
+## Tech Stack
+
+### Frontend
+- React JS – Used for building a component-based user interface.
+- Tailwind CSS – Utility-first CSS framework for responsive and modern design.
+- JavaScript XML (JSX) – Syntax extension used in React for writing UI components.
+- Axios – Used for making API calls and handling communication between services.
+
+### Database
+- PostgreSQL – Relational database used for storing application data.
+
+### Deployment / Development Environment
+- Docker – Used for containerization and consistent development environment.
+
+## Key Features
+- Responsive and modern user interface
+- Component-based architecture using React
+- API integration using Axios
+- Structured data management with PostgreSQL
+- Containerized environment using Docker
+- Scalable and maintainable project structure
+
+## Project Structure
+ai-ecommerce/
+│
+├── frontend/ # React frontend application
+├── backend/ # Backend services and APIs
+├── database/ # PostgreSQL database configuration
+├── docker/ # Docker related configuration
+└── README.md # Project documentation
+
+## Installation and Setup
+
+Clone the repository:
+https://github.com/Rushab-Ghimire/Ai-Ecommerce-Frontend.git
+
+
+## Steps to open:
+In Terminal: [Frontend]
+Step-1 : cd ai-ecommerce 
+Step-2 : npm run dev
+
+Run the project using Docker:
+[backend]
+docker-compose up
+
+After running the containers, open the application in your browser:
+- http://localhost:3000
+
+
+## Purpose of the Project
+The purpose of this project is to demonstrate the development of a modern web application using React, API communication, relational databases, and containerization technologies.
