@@ -13,8 +13,8 @@ const Navbar = () => {
 
     {/* Mobile View */}
     <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black text-white shadow-lg py-6 flex-col items-start gap-4 px-6 text-lg md:hidden">
-        <a href="#" className="hover:text-black transition">Home</a>
-        <a href="#" className="hover:text-black transition">Product Catogories</a>
+        <a href="/" className="hover:text-black transition">Home</a>
+        <a href="/products" className="hover:text-black transition">Product Catogories</a>
         <a href="#" className="hover:text-black transition">Customer Service</a>
 
         <button class="cursor-pointer px-5 py-2 bg-blue-500 hover:bg-blue-600 transition rounded-full font-medium">
@@ -25,8 +25,8 @@ const Navbar = () => {
     {/* Desktop Nav */}
     <div className="hidden sm:flex items-center gap-10 text-lg font-medium">
 
-        <a href="#" className="hover:text-black transition">Home</a>
-        <a href="#" className="hover:text-black transition">Product Catogories</a>
+        <a href="/" className="hover:text-black transition">Home</a>
+        <a href="/products" className="hover:text-black transition">Product Catogories</a>
         <a href="#" className="hover:text-black transition">Customer Service</a>
 
         <div class="hidden lg:flex items-center text-sm gap-2 border border-black px-3 py-1.5 bg-white backdrop-blur">
