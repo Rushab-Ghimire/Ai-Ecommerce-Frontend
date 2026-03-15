@@ -32,20 +32,25 @@ const FeaturedProducts = () => {
     <div className="px-6 md:px-16 lg:px-24 bg-slate-50 py-20">
 
       {/* Header */}
-      <div className="flex text-center justify-between items-center mb-12">
-        <Title
-          title="Featured Products"
-          subTitle="Discover trending products from ShopBazaar with amazing deals and top quality items."
-        />
+      <div className="relative flex items-center mb-12">
 
-        <button
-          onClick={handleNavigate}
-          className="text-sm font-medium text-orange-500 hover:underline"
-        >
-          View All →
-        </button>
-      </div>
+      {/* Center Title */}
+       <div className="mx-auto text-center">
+    <Title
+      title="Featured Products"
+      subTitle="Discover trending products from ShopBazaar with amazing deals and top quality items."
+    />
+  </div>
 
+  {/* Right Button */}
+  <button
+    onClick={handleNavigate}
+    className="absolute right-0 text-sm font-medium text-black hover:underline"
+  >
+    View All →
+  </button>
+
+</div>
       {/* Slider */}
       <div className="relative">
 
@@ -63,7 +68,7 @@ const FeaturedProducts = () => {
           className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
         >
           {productsDummyData.slice(0, 8).map((product, index) => (
-            <div key={product._id} className="min-w-[250px]">
+            <div key={product._id} className="`min-w-[250px]`">
               <ProductCard product={product} index={index} />
             </div>
           ))}
