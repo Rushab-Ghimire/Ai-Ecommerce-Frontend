@@ -1,54 +1,81 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { assets } from '../assets/assets'
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import { ShoppingCart, User, Search } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-6 md:px-10 lg:px-16 py-4 bg-white text-black shadow-md sticky top-0 z-50 transition-all">
-    
-    {/* logo */}
-    <Link to='/'>
-     <img className="h-12 w-auto object-contain" src={assets.logo} alt="logo"/>
-    </Link>
+    <header className="w-full">
 
-    {/* Mobile View */}
-    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black text-white shadow-lg py-6 flex-col items-start gap-4 px-6 text-lg md:hidden">
-        <a href="/" className="hover:text-black transition">Home</a>
-        <a href="/products" className="hover:text-black transition">Product Catogories</a>
-        <a href="#" className="hover:text-black transition">Customer Service</a>
-
-        <button class="cursor-pointer px-5 py-2 bg-blue-500 hover:bg-blue-600 transition rounded-full font-medium">
-            Login
-        </button>
-    </div>
-
-    {/* Desktop Nav */}
-    <div className="hidden sm:flex items-center gap-10 text-lg font-medium">
-
-        <a href="/" className="hover:text-black transition">Home</a>
-        <a href="/products" className="hover:text-black transition">Product Catogories</a>
-        <a href="#" className="hover:text-black transition">Customer Service</a>
-
-        <div class="hidden lg:flex items-center text-sm gap-2 border border-black px-3 py-1.5 bg-white backdrop-blur">
-            <input 
-            class="w-40 bg-transparent outline-none placeholder-black text-black"
-            type="text"
-            placeholder="Search Products"
-            />
-            <img className="w-9 h-7 bg-black opacity-800" src={assets.searchIcon} alt="Search Products" />     
-        </div>  
-        <div className='relative cursor-pointer'>
-            <img className='h-9 rounded-3xl' src={assets.cart} ></img>
-            
+      {/* TOP CONTACT BAR */}
+      <div className="bg-gray-100 text-sm text-gray-600 py-2 px-6 flex justify-between">
+        <div className="flex gap-6">
+          <p>123 Main Street, Anytown USA</p>
+          <p>+1 (555) 123-4567</p>
         </div>
-        <button class="cursor-pointer px-4 py-1 bg-black hover:bg-blue-900 text-white transition rounded-full font-semibold shadow-md">
-            Login
-        </button>
 
-    </div>
+        <div className="flex gap-4 items-center">
+          <p>USD</p>
+          <p>English</p>
+        </div>
+      </div>
 
-    </nav>
-  )
-}
+      {/* MAIN NAVBAR */}
+      <div className="flex items-center justify-between px-10 py-4 bg-white">
 
-export default Navbar
+        {/* LOGO */}
+        <Link to="/" className="text-2xl font-bold">
+          e-shop<span className="text-orange-500">.</span>
+        </Link>
+
+        {/* SEARCH */}
+        <div className="hidden lg:flex items-center border rounded-md px-3 py-2 w-[400px]">
+          <input
+            type="text"
+            placeholder="Search Products..."
+            className="w-full outline-none"
+          />
+          <Search size={20} />
+        </div>
+
+        {/* CART + ACCOUNT */}
+        <div className="flex items-center gap-6">
+
+          <div className="flex items-center gap-2 cursor-pointer">
+            <ShoppingCart />
+            <span>Cart</span>
+          </div>
+
+          <div className="flex items-center gap-2 cursor-pointer">
+            <User />
+            <span>Account</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* CATEGORY NAVBAR */}
+      <div className="bg-orange-500 text-white px-10 py-3 flex justify-between text-sm font-medium">
+
+        <div className="flex gap-8">
+          <Link to="/">All Categories</Link>
+          <Link to="/">Products</Link>
+          <Link to="/">Blog</Link>
+          <Link to="/">Contact</Link>
+        </div>
+
+        <div className="flex gap-8">
+          <Link to="/">LIMITED SALE</Link>
+          <Link to="/">Best Seller</Link>
+          <Link to="/">New Arrival</Link>
+        </div>
+
+      </div>
+
+    </header>
+  );
+};
+
+export default Navbar;

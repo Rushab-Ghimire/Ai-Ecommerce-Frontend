@@ -1,83 +1,81 @@
-import React from "react";
 import { assets } from "../assets/assets";
-import { ShoppingBag, BarChart3, MapPin, Play } from "lucide-react";
+import { Headphones, ShieldCheck, Truck, RotateCcw } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="`bg-gradient-to-r` from-gray-50 to-orange-50 py-20">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 items-center gap-10">
+    <section className="bg-gray-50 py-10">
 
-        {/* Left Content */}
-        <div>
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-            All Your Styles <br />
-            Curated Just For You
-          </h1>
+      <div className="max-w-7xl mx-auto px-6">
 
-          <p className="text-gray-600 mt-4 max-w-md">
-            This e-commerce website is a platform where you can order or purchase
-            clothes of your choice. You will find every new design with good quality.
-          </p>
+        {/* HERO BANNER */}
+        <div className="bg-white rounded-xl p-10 grid md:grid-cols-2 items-center gap-10 shadow">
 
-          <div className="flex items-center gap-4 mt-6">
-            <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-medium">
-              Explore Now
-            </button>
+          {/* LEFT TEXT */}
+          <div>
+            <h1 className="text-4xl font-bold leading-tight">
+              Your One-Stop <br /> Electronic Market
+            </h1>
 
-            <button className="flex items-center gap-2 text-gray-700">
-              <span className="border rounded-full p-2">
-                <Play size={16} />
-              </span>
-              Watch A Video
+            <p className="text-gray-500 mt-4 max-w-md">
+              Welcome to e-shop, a place where you can buy everything about
+              electronics. Sale every day.
+            </p>
+
+            <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium">
+              Shop Now
             </button>
           </div>
-        </div>
 
-        {/* Center Image */}
-        <div className="flex justify-center">
-          <img
-            src={assets.Hero}
-            alt="product"
-            className="w-[320px] `lg:w-[380px]` drop-shadow-xl"
-          />
-        </div>
-
-        {/* Right Stats */}
-        <div className="space-y-6">
-
-          <div className="flex items-center gap-4 bg-white shadow-md p-4 rounded-xl">
-            <div className="bg-orange-100 p-3 rounded-full">
-              <ShoppingBag className="text-orange-500" size={20} />
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">2082</h3>
-              <p className="text-sm text-gray-500">Products</p>
-            </div>
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center">
+            <img
+              src={assets.heroBanner}
+              alt="electronics"
+              className="w-[420px]"
+            />
           </div>
 
-          <div className="flex items-center gap-4 bg-white shadow-md p-4 rounded-xl">
-            <div className="bg-orange-100 p-3 rounded-full">
-              <BarChart3 className="text-orange-500" size={20} />
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">150</h3>
-              <p className="text-sm text-gray-500">Daily Sales</p>
-            </div>
+        </div>
+
+        {/* FEATURE SECTION */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
+
+          <div className="flex flex-col items-center gap-2">
+            <Headphones className="text-orange-500" />
+            <p className="font-medium">Responsive</p>
+            <span className="text-sm text-gray-500">
+              Customer service available 24/7
+            </span>
           </div>
 
-          <div className="flex items-center gap-4 bg-white shadow-md p-4 rounded-xl">
-            <div className="bg-orange-100 p-3 rounded-full">
-              <MapPin className="text-orange-500" size={20} />
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">8</h3>
-              <p className="text-sm text-gray-500">Country</p>
-            </div>
+          <div className="flex flex-col items-center gap-2">
+            <ShieldCheck className="text-orange-500" />
+            <p className="font-medium">Secure</p>
+            <span className="text-sm text-gray-500">
+              Certified marketplace since 2017
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <Truck className="text-orange-500" />
+            <p className="font-medium">Shipping</p>
+            <span className="text-sm text-gray-500">
+              Free, fast and reliable worldwide
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <RotateCcw className="text-orange-500" />
+            <p className="font-medium">Transparent</p>
+            <span className="text-sm text-gray-500">
+              Hassle-free return policy
+            </span>
           </div>
 
         </div>
 
       </div>
+
     </section>
   );
 };
