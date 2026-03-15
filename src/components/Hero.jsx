@@ -13,15 +13,14 @@ const Hero = () => {
           {/* LEFT TEXT */}
           <div>
             <h1 className="text-4xl font-bold leading-tight">
-              Your One-Stop <br /> Electronic Market
+              Your Online  <br /> Shopping Platform !!
             </h1>
 
             <p className="text-gray-500 mt-4 max-w-md">
-              Welcome to e-shop, a place where you can buy everything about
-              electronics. Sale every day.
+              Welcome to ShopBazaar, a place where you can buy everything. Sale every day.
             </p>
 
-            <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium">
+            <button className="mt-6 bg-black hover:bg-black text-white px-6 py-3 rounded-lg font-medium">
               Shop Now
             </button>
           </div>
@@ -29,9 +28,9 @@ const Hero = () => {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center">
             <img
-              src={assets.heroBanner}
+              src={assets.Hero}
               alt="electronics"
-              className="w-[420px]"
+              className="`w-[420px]`"
             />
           </div>
 
@@ -41,33 +40,33 @@ const Hero = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
 
           <div className="flex flex-col items-center gap-2">
-            <Headphones className="text-orange-500" />
+            <Headphones className="text-black" />
             <p className="font-medium">Responsive</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Customer service available 24/7
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <ShieldCheck className="text-orange-500" />
+            <ShieldCheck className="text-black" />
             <p className="font-medium">Secure</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Certified marketplace since 2017
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <Truck className="text-orange-500" />
+            <Truck className="text-black" />
             <p className="font-medium">Shipping</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Free, fast and reliable worldwide
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <RotateCcw className="text-orange-500" />
+            <RotateCcw className="text-black" />
             <p className="font-medium">Transparent</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Hassle-free return policy
             </span>
           </div>
