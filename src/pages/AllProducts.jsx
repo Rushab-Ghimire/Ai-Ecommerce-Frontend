@@ -134,7 +134,7 @@ const AllProducts = () => {
               {/* PRODUCT PRICE */}
 
               <p className='text-xl font-medium text-gray-700'>
-                ${product.price}
+                NPR. {product.price}
               </p>
 
             </div>
