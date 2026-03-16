@@ -48,6 +48,7 @@ export const assets = {
     laptop,
     shop,
     
+    laptop
 }
 
 export const productsDummyData = [
@@ -69,7 +70,40 @@ export const productsDummyData = [
     images: [watch],
     features: ["Heart Rate", "Fitness Tracking", "Waterproof"]
   },
-
-  
-]
-
+  {
+    _id: "3",
+    name: "Sport Smart Watch",
+    category: "Electronics",
+    brand: "Samsung",
+    price: 300,
+    images: [watch1],
+    features: ["Heart Rate Monitor", "Step Counter", "Water Resistant"]
+  },
+  {
+    _id: "4",
+    name: "Football Jersey",
+    category: "Clothing",
+    brand: "Nike",
+    price: 80,
+    images: [jersey],
+    features: ["Breathable Fabric", "Lightweight", "Sports Wear"]
+  },
+  {
+    _id: "5",
+    name: "Smart Phone",
+    category: "Electronics",
+    brand: "Samsung",
+    price: 900,
+    images: [phone],
+    features: ["5G", "128GB Storage", "AMOLED Display"]
+  },
+  {
+    _id: "6",
+    name: "Laptop",
+    category: "Electronics",
+    brand: "Dell",
+    price: 1200,
+    images: [laptop],
+    features: ["16GB RAM", "512GB SSD", "Intel i7 Processor"]
+  }
+];

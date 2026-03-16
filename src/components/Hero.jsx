@@ -180,6 +180,28 @@ const Hero = () => {
               ))}
             </div>
 
+          {/* LEFT TEXT */}
+          <div>
+            <h1 className="text-4xl font-bold leading-tight">
+              Your Online  <br /> Shopping Platform !!
+            </h1>
+
+            <p className="text-gray-500 mt-4 max-w-md">
+              Welcome to ShopBazaar, a place where you can buy everything. Sale every day.
+            </p>
+
+            <button className="mt-6 bg-black hover:bg-black text-white px-6 py-3 rounded-lg font-medium">
+              Shop Now
+            </button>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center">
+            <img
+              src={assets.Hero}
+              alt="electronics"
+              className="`w-[420px]`"
+            />
           </div>
 
         </div>
@@ -190,32 +212,36 @@ const Hero = () => {
 
           <div className="flex flex-col items-center gap-2">
             <Headphones />
+            <Headphones className="text-black" />
             <p className="font-medium">Responsive</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Customer service available 24/7
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
             <ShieldCheck />
+            <ShieldCheck className="text-black" />
             <p className="font-medium">Secure</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Certified marketplace since 2017
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
             <Truck />
+            <Truck className="text-black" />
             <p className="font-medium">Shipping</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Free, fast and reliable worldwide
             </span>
           </div>
 
           <div className="flex flex-col items-center gap-2">
             <RotateCcw />
+            <RotateCcw className="text-black" />
             <p className="font-medium">Transparent</p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               Hassle-free return policy
             </span>
           </div>

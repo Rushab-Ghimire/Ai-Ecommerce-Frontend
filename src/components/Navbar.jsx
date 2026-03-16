@@ -11,13 +11,13 @@ const Navbar = () => {
       {/* TOP CONTACT BAR */}
       <div className="bg-gray-100 text-sm text-gray-600 py-2 px-6 flex justify-between">
         <div className="flex gap-6">
-          <p>123 Main Street, Anytown USA</p>
-          <p>+1 (555) 123-4567</p>
+          <p>11 Sunaulo Marg, Dharan </p>
+          <p>+2 (555) 025-4567</p>
         </div>
 
         <div className="flex gap-4 items-center">
-          <p>USD</p>
-          <p>English</p>
+          <p>Nepalese Rupee</p>
+          <p>Nepali</p>
         </div>
       </div>
 
@@ -25,18 +25,18 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-10 py-4 bg-white">
 
         {/* LOGO */}
-        <Link to="/" className="text-2xl font-bold">
-          e-shop<span className="text-orange-500">.</span>
+         <Link to='/'>
+          <img src={assets.logo} alt="logo" className={"h-12"}/>
         </Link>
 
         {/* SEARCH */}
-        <div className="hidden lg:flex items-center border rounded-md px-3 py-2 w-[400px]">
+        <div className="hidden lg:flex items-center border rounded-md px-8 py-2 `w-[400px] border-black`">
           <input
             type="text"
             placeholder="Search Products..."
             className="w-full outline-none"
           />
-          <Search size={20} />
+          <Search size={30} />
         </div>
 
         {/* CART + ACCOUNT */}
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {/* CATEGORY NAVBAR */}
-      <div className="bg-orange-500 text-white px-10 py-3 flex justify-between text-sm font-medium">
+      <div className="bg-black text-white px-10 py-3 flex justify-between text-sm font-medium">
 
         <div className="flex gap-8">
           <Link to="/">All Categories</Link>
