@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
@@ -7,15 +8,15 @@ const ProductCard = ({ product, index }) => {
     <Link
       to={"/products/" + product._id}
       onClick={() => window.scrollTo(0, 0)}
-      className="relative w-full `max-w-[260px]` bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+      className="relative w-full max-w-[260px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition flex flex-col"
     >
 
       {/* Product Image */}
-      <div className="w-full h-48 bg-gray-100 overflow-hidden">
+      <div className="w-full h-48 bg-gray-100 flex items-center justify-center p-4">
         <img
           src={product.images[0]}
           alt="product"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
 
@@ -27,15 +28,15 @@ const ProductCard = ({ product, index }) => {
       )}
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
 
         {/* Name + Rating */}
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-800">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="text-base font-semibold text-gray-800 leading-snug line-clamp-2">
             {product.name}
           </h3>
 
-          <div className="flex items-center gap-1 text-sm">
+          <div className="flex items-center gap-1 text-sm text-gray-700 whitespace-nowrap">
             <img
               src={assets.starIconFilled}
               alt="star"
@@ -46,7 +47,7 @@ const ProductCard = ({ product, index }) => {
         </div>
 
         {/* Category */}
-        <div className="flex items-center gap-2 text-sm text-gray-500 mt-1">
+        <div className="flex items-center gap-2 text-sm text-gray-500 mt-3">
           <img
             src={assets.categoryIcon}
             alt="category"
@@ -55,22 +56,26 @@ const ProductCard = ({ product, index }) => {
           <span>{product.category}</span>
         </div>
 
+        {/* Spacer */}
+        <div className="flex-grow"></div>
+
         {/* Price + Button */}
         <div className="flex items-center justify-between mt-4">
           <p className="text-lg font-semibold text-gray-900">
-            ${product.price}
+            NPR. {product.price}
           </p>
 
           <button
-            className="px-3 py-2 text-sm border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+            className="px-3 py-1.5 text-sm border border-gray-300 rounded-lg hover:bg-gray-100 transition whitespace-nowrap"
           >
             Add to Cart
           </button>
         </div>
 
       </div>
+
     </Link>
   );
 };
 
-export default ProductCard
+export default ProductCard;

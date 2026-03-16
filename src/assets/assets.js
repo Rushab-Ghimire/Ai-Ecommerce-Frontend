@@ -1,7 +1,11 @@
 import logo from './logo.png'
 import searchIcon from './searchIcon.svg'
 import cart from './cart.png'
-import Hero from './hero.png'
+import Hero from './Hero.png'
+import Hero1 from './Hero1.png'
+import Hero2 from './Hero2.png'
+import Hero3 from './Hero3.png'
+import Hero4 from './Hero4.png'
 import discount from './discount.png'
 import facebook from './facebookIcon.svg'
 import instagram from './instagramIcon.svg'
@@ -17,11 +21,16 @@ import jersey from './jersey.png'
 import watch1 from './watch.png'
 import phone from './phone.png'
 import laptop from './laptop.png'
+import shop from './shop.png'
 export const assets = {
     logo,
     searchIcon,
     cart,
     Hero,
+    Hero1,
+    Hero2,
+    Hero3,
+    Hero4,
     discount,
     facebook,
     instagram,
@@ -36,6 +45,9 @@ export const assets = {
     watch1,
     jersey,
     phone,
+    laptop,
+    shop,
+    
     laptop
 }
 
