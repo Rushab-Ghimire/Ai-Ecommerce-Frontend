@@ -22,6 +22,9 @@ import watch1 from './watch.png'
 import phone from './phone.png'
 import laptop from './laptop.png'
 import shop from './shop.png'
+import hero_img1 from './hero_img1.png'
+import hero_img2 from './hero_img2.png'
+import arrowIcon from './arrowIcon.svg'
 export const assets = {
     logo,
     searchIcon,
@@ -31,6 +34,8 @@ export const assets = {
     Hero2,
     Hero3,
     Hero4,
+    hero_img1,
+    hero_img2,
     discount,
     facebook,
     instagram,
@@ -39,6 +44,7 @@ export const assets = {
     starIconFilled,
     starIconOutlined,
     categoryIcon,
+    arrowIcon,
     brandIcon,
     headphone,
     watch,
@@ -47,7 +53,6 @@ export const assets = {
     phone,
     laptop,
     shop,
-    
     laptop
 }
 

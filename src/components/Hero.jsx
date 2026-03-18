@@ -1,249 +1,101 @@
-// import { assets } from "../assets/assets";
-// import { Headphones, ShieldCheck, Truck, RotateCcw } from "lucide-react";
-
-// const Hero = () => {
-//   return (
-//     <section className="bg-gray-50 py-10">
-
-//       <div className="max-w-7xl mx-auto px-6">
-
-//         {/* HERO BANNER */}
-//         <div className="bg-white rounded-xl p-10 grid md:grid-cols-2 items-center gap-10 shadow">
-
-//           {/* LEFT TEXT */}
-//           <div>
-//             <h1 className="text-4xl font-bold leading-tight">
-//               Your Online  <br /> Shopping Platform !!
-//             </h1>
-
-//             <p className="text-gray-500 mt-4 max-w-md">
-//               Welcome to ShopBazaar, a place where you can buy everything. Sale every day.
-//             </p>
-
-//             <button className="mt-6 bg-black hover:bg-black text-white px-6 py-3 rounded-lg font-medium">
-//               Shop Now
-//             </button>
-//           </div>
-
-//           {/* RIGHT IMAGE */}
-//           <div className="flex justify-center">
-//             <img
-//               src={assets.Hero}
-//               alt="electronics"
-//               className="`w-[420px]`"
-//             />
-//           </div>
-
-//         </div>
-
-//         {/* FEATURE SECTION */}
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
-
-//           <div className="flex flex-col items-center gap-2">
-//             <Headphones className="text-black" />
-//             <p className="font-medium">Responsive</p>
-//             <span className="text-sm text-gray-600">
-//               Customer service available 24/7
-//             </span>
-//           </div>
-
-//           <div className="flex flex-col items-center gap-2">
-//             <ShieldCheck className="text-black" />
-//             <p className="font-medium">Secure</p>
-//             <span className="text-sm text-gray-600">
-//               Certified marketplace since 2017
-//             </span>
-//           </div>
-
-//           <div className="flex flex-col items-center gap-2">
-//             <Truck className="text-black" />
-//             <p className="font-medium">Shipping</p>
-//             <span className="text-sm text-gray-600">
-//               Free, fast and reliable worldwide
-//             </span>
-//           </div>
-
-//           <div className="flex flex-col items-center gap-2">
-//             <RotateCcw className="text-black" />
-//             <p className="font-medium">Transparent</p>
-//             <span className="text-sm text-gray-600">
-//               Hassle-free return policy
-//             </span>
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// };
-
-// export default Hero;
 import { assets } from "../assets/assets";
-import { Headphones, ShieldCheck, Truck, RotateCcw } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
 
-  const images = [
-    assets.Hero,
-    assets.Hero1,
-    assets.Hero2,
-    assets.Hero3,
-    assets.Hero4
-  ];
-
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const currency = "Rs.";
 
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-white py-12">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* MAIN HERO GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        {/* MAIN GRID */}
+        <div className="flex flex-col xl:flex-row gap-8">
 
-          {/* TEXT SECTION (BIGGER) */}
-          <div className="md:col-span-9 bg-white rounded-xl p-15 shadow">
+          {/* LEFT HERO */}
+          <div className="relative flex-1 bg-gray-100 rounded-3xl p-8 sm:p-12 overflow-hidden">
 
-            <div className="flex items-center justify-between gap-8">
+            {/* TEXT CONTENT */}
+            <div className="max-w-lg relative z-10">
+              <p className="text-sm text-gray-500 uppercase tracking-wide">
+                New Collection
+              </p>
 
-              {/* TEXT CONTENT */}
-              <div>
-                <h1 className="text-5xl font-bold leading-tight">
-                  Your Online <br /> Shopping Platform !!
-                </h1>
+              <h1 className="text-4xl sm:text-5xl font-bold leading-tight mt-3 text-gray-900">
+                Shop smart  <br />
+                with confidence
+              </h1>
 
-                <p className="text-gray-600 mt-10 max-w-md">
-                  Welcome to ShopBazaar, a place where you can buy everything. 
-                  Sale every day.
+              <p className="text-gray-600 mt-6">
+                Discover high-quality products at affordable prices. 
+              </p>
+
+              <div className="mt-6">
+                <p className="text-sm text-gray-500">Starting from</p>
+                <p className="text-3xl font-semibold text-black">
+                  {currency} 650
                 </p>
-
-                <button className="mt-10 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition">
-                  Shop Now
-                </button>
               </div>
 
-              {/* IMAGE IN TEXT SECTION */}
+              <button className="mt-8 bg-black text-white px-8 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition">
+                Shop Now <ArrowRight size={18} />
+              </button>
+            </div>
+
+          <img
+  src={assets.hero_model_img || assets.Hero}
+  alt="hero"
+  className="absolute bottom-0 right-0 sm:right-6 `w-[280px] sm:w-[380px] md:w-[420px]` object-contain"
+/>
+
+          </div>
+
+          {/* RIGHT SIDE CARDS */}
+          <div className="flex flex-col gap-6 w-full xl:max-w-sm">
+
+            {/* CARD 1 */}
+            <button className="flex items-center justify-between bg-gray-100 rounded-2xl p-6 hover:shadow-md transition group">
+
+              <div className="text-left">
+                <p className="text-xl font-semibold text-gray-900">
+                  Best Products
+                </p>
+                <span className="flex items-center gap-1 text-sm text-gray-600 mt-2">
+                  Explore
+                  <ArrowRight size={16} className="group-hover:ml-1 transition-all" />
+                </span>
+              </div>
+
               <img
-                src={assets.shop}
-                alt="shopping"
-                className="w-70 object-contain"
+                src={assets.hero_img1}
+                alt="product1"
+                className="w-24 object-contain"
               />
 
-            </div>
-
-          </div>
-
-
-          {/* SLIDER SECTION (SMALLER) */}
-          <div className="md:col-span-3 bg-white rounded-xl p-9 shadow flex flex-col items-center">
-
-            <div className="relative w-full h-[320px] overflow-hidden flex items-center justify-center">
-
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt="banner"
-                  className={`absolute w-full h-full object-cover transition-all duration-700
-                  ${currentImage === index
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95"
-                  }`}
-                />
-              ))}
-
-            </div>
-
-            {/* DOTS */}
-            <div className="flex gap-2 mt-4">
-              {images.map((_, index) => (
-                <span
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`cursor-pointer rounded-full transition-all
-                  ${currentImage === index
-                    ? "w-5 h-2 bg-black"
-                    : "w-2 h-2 bg-gray-300"
-                  }`}
-                />
-              ))}
-            </div>
-
-          {/* LEFT TEXT */}
-          <div>
-            <h1 className="text-4xl font-bold leading-tight">
-              Your Online  <br /> Shopping Platform !!
-            </h1>
-
-            <p className="text-gray-500 mt-4 max-w-md">
-              Welcome to ShopBazaar, a place where you can buy everything. Sale every day.
-            </p>
-
-            <button className="mt-6 bg-black hover:bg-black text-white px-6 py-3 rounded-lg font-medium">
-              Shop Now
             </button>
-          </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center">
-            <img
-              src={assets.Hero}
-              alt="electronics"
-              className="`w-[420px]`"
-            />
-          </div>
+            {/* CARD 2 */}
+            <button className="flex items-center justify-between bg-gray-100 rounded-2xl p-6 hover:shadow-md transition group">
 
-        </div>
+              <div className="text-left">
+                <p className="text-xl font-semibold text-gray-900">
+                  Special Offers
+                </p>
+                <span className="flex items-center gap-1 text-sm text-gray-600 mt-2">
+                  Shop Deals
+                  <ArrowRight size={16} className="group-hover:ml-1 transition-all" />
+                </span>
+              </div>
 
+              <img
+                src={assets.hero_img2}
+                alt="product2"
+                className="w-24 object-contain"
+              />
 
-        {/* FEATURES */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
+            </button>
 
-          <div className="flex flex-col items-center gap-2">
-            <Headphones />
-            <Headphones className="text-black" />
-            <p className="font-medium">Responsive</p>
-            <span className="text-sm text-gray-600">
-              Customer service available 24/7
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <ShieldCheck />
-            <ShieldCheck className="text-black" />
-            <p className="font-medium">Secure</p>
-            <span className="text-sm text-gray-600">
-              Certified marketplace since 2017
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <Truck />
-            <Truck className="text-black" />
-            <p className="font-medium">Shipping</p>
-            <span className="text-sm text-gray-600">
-              Free, fast and reliable worldwide
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <RotateCcw />
-            <RotateCcw className="text-black" />
-            <p className="font-medium">Transparent</p>
-            <span className="text-sm text-gray-600">
-              Hassle-free return policy
-            </span>
           </div>
 
         </div>
